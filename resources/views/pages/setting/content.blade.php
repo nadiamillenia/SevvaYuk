@@ -6,8 +6,14 @@
                 @include('layouts.includes.account-navbar')
                 <div class="col-lg-9">
                     <div class="tab-content myaccount-tab-content" id="account-page-tab-content">
-                        <form action="#" class="quicky-form">
+                        <form action="{{ route('password.update') }}" method="post" class="quicky-form">
+                            @csrf
                             <div class="quicky-form-inner">
+                                @if (session('status'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ session('status') }}
+                                    </div>
+                                @endif
                                 <div class="single-input">
                                     <label for="account-details-newpass">Password Baru</label>
                                     <input type="password" id="account-details-newpass">
@@ -17,6 +23,7 @@
                                     <input type="password" id="account-details-confpass">
                                 </div>
                                 <div class="single-input">
+                                    <input type="hidden" name="email" value="{{ $user->email }}">
                                     <button class="quicky-btn-2" type="submit"><span>Simpan</span></button>
                                 </div>
                             </div>

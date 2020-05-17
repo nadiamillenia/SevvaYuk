@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\OrderDetail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class PaymentController extends Controller
 {
@@ -46,8 +48,9 @@ class PaymentController extends Controller
      */
     public function show($order_id)
     {
-        $order = Order::where('id', $order_id)->get();
-        return view('pages.payment.index')->with('order', $order);
+        $order = Order::find($order_id);
+        $details = OrderDetail::with('product')->where('order_id', $order_id)->get();
+        return view('pages.payment.index')->with('order', $order)->with('details', $details);
     }
 
     /**
@@ -68,9 +71,13 @@ class PaymentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $order_id)
     {
-        //
+        $order = Order::find($order_id);
+        $order->status_id = 2;
+        $order->save();
+
+        return Redirect::to('account/orders');
     }
 
     /**

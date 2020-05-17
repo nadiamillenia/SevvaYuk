@@ -322,10 +322,9 @@
                 <a href="#" class="btn-close"><i class="zmdi zmdi-close"></i></a>
                 <!-- Begin Offcanvas Search Area -->
                 <div class="offcanvas-search">
-                    <form action="#" class="hm-searchbox">
-                        <input type="text" placeholder="Search for item...">
-                        <button class="search_btn" type="submit"><i
-                            class="zmdi zmdi-search"></i></button>
+                    <form action="{{ url('search') }}" method="get" class="hm-searchbox">
+                        <input type="text" name="search" placeholder="Search for item...">
+                        <button class="search_btn" type="submit"><i class="zmdi zmdi-search"></i></button>
                     </form>
                 </div>
                 <!-- Offcanvas Search Area End Here -->

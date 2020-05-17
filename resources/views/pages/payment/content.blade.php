@@ -1,6 +1,6 @@
 <div class="checkout-area">
     <div class="container">
-        <form action="{{ url('checkout') }}" method="POST">
+        <form action="{{ url('payment/'. $order->id) }}" method="POST">
             @csrf
             <div class="row">
                 <div class="col-lg-12 col-12">
@@ -15,7 +15,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($order->details as $detail)
+                                    @foreach ($details as $detail)
                                         <tr class="cart_item">
                                             <td class="cart-product-name"> {{ $detail->product->name }}<strong class="product-quantity">
                                             × {{ $detail->quantity }}</strong></td>
@@ -30,8 +30,7 @@
                                     </tr>
                                     <tr class="order-total">
                                         <th>Total</th>
-                                        <input type="hidden" name="amount" value="{{ $carts->sum('total_price') }}">
-                                        <td><strong><span class="amount">@currency($carts->amount)</span></strong></td>
+                                        <td><strong><span class="amount">@currency($order->amount)</span></strong></td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -39,6 +38,7 @@
                         <div class="payment-method">
                             <div class="payment-accordion">
                                 <div class="order-button-payment">
+                                    <input type="hidden" name="_method" value="patch">
                                     <input value="Bayar Pesanan" type="submit">
                                 </div>
                             </div>

@@ -87,6 +87,7 @@ class UserController extends Controller
 
     public function setting()
     {
-        return view('pages.setting.index');
+        $user = Auth::user();
+        return view('pages.setting.index')->with('user', $user);
     }
 }
