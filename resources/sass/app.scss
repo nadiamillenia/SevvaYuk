@@ -1,0 +1,48 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Muli:400,400i,500,500i,600,600i,700,700i|Poppins:400,400i,500,500i,600,600i,700,700i|Quicksand:400,500,600,700|Titillium+Web:400,400i,600,600i,700,700i&display=swap");
+
+//Base
+@import "base/variables";
+@import "base/mixins";
+@import "base/typography";
+
+// Utilities
+@import "utilities/helper";
+@import "utilities/color";
+
+// Components
+@import "components/navigation";
+@import "components/slider";
+@import "components/button";
+@import "components/service";
+@import "components/banner";
+@import "components/product";
+@import "components/product-tab";
+@import "components/brand";
+@import "components/form";
+@import "components/social-link";
+@import "components/animation";
+@import "components/breadcrumb";
+@import "components/modal";
+@import "components/instagram";
+@import "components/best-deals";
+@import "components/newsletter-with_testimonial";
+
+// Section
+@import "section/header";
+@import "section/footer";
+
+// Pages
+@import "pages/blog";
+@import "pages/shop";
+@import "pages/404";
+@import "pages/contact";
+@import "pages/faq";
+@import "pages/my-account";
+@import "pages/login-register";
+@import "pages/cart";
+@import "pages/wishlist";
+@import "pages/checkout";
+@import "pages/single-product";
+@import "pages/compare";
+@import "pages/about-us";
