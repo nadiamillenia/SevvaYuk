@@ -865,7 +865,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\sevima\Programming\laravel\sevvayuk\resources\js\main.js */"./resources/js/main.js");
+module.exports = __webpack_require__(/*! C:\xampp2\htdocs\sevvayuk\resources\js\main.js */"./resources/js/main.js");
 
 
 /***/ })
