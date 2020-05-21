@@ -38,3 +38,6 @@ Route::get('/account/profile', 'UserController@index')->name('user.index')->midd
 Route::patch('/account/profile/{user}', 'UserController@update')->name('user.update')->middleware('auth');
 Route::get('/account/orders', 'OrderController@index')->name('order.index')->middleware('auth');
 Route::get('/account/setting', 'UserController@setting')->name('user.setting')->middleware('auth');
+
+Route::get('/rating/{store_id}', 'RatingController@formRating');
+Route::post('/rating/{store_id}', 'RatingController@createRating');
