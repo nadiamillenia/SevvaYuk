@@ -12,10 +12,40 @@
                         <h4 class="login-title">Daftar Akun</h4>
                         <div class="row">
                             <div class="col-md-12 col-12">
-                                <label for="email">Nama Lengkap*</label>
+                                <label for="name">Nama Lengkap*</label>
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Nama Lengkap" required autocomplete="name" autofocus>
 
                                 @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="col-md-12 col-12">
+                                <label for="noktp">Nomor KTP*</label>
+                                <input id="nnoktp" type="text" class="form-control @error('noktp') is-invalid @enderror" name="noktp" value="{{ old('noktp') }}" placeholder="Nomor KTP" required autocomplete="noktp" autofocus>
+
+                                @error('noktp')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="col-md-12 col-12">
+                                <label for="notelp">Nomor Telpon*</label>
+                                <input id="notelp" type="text" class="form-control @error('notelp') is-invalid @enderror" name="notelp" value="{{ old('notelp') }}" placeholder="Nomor Telpon" required autocomplete="noktp" autofocus>
+
+                                @error('notelp')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="col-md-12 col-12">
+                                <label for="username">Username*</label>
+                                <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" placeholder="Username" required autocomplete="username" autofocus>
+
+                                @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

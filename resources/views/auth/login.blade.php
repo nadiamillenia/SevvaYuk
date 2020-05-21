@@ -11,9 +11,9 @@
                         <h4 class="login-title">Masuk</h4>
                         <div class="row">
                             <div class="col-md-12 col-12">
-                                <label for="email">Email*</label>
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" required autocomplete="email" autofocus>
-                                @error('email')
+                                <label for="username">Username*</label>
+                                <input id="username" type="username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" placeholder="Username" required autocomplete="username" autofocus>
+                                @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
