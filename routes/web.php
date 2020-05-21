@@ -39,11 +39,4 @@ Route::patch('/account/profile/{user}', 'UserController@update')->name('user.upd
 Route::get('/account/orders', 'OrderController@index')->name('order.index')->middleware('auth');
 Route::get('/account/setting', 'UserController@setting')->name('user.setting')->middleware('auth');
 
-Route::post('/admin/loginPost', 'AdminController@loginPost');
-
-Route::get('/admin/home', 'AdminController@index')->name('home');
-
-//Transaction
-/*Route::resource('transaction', 'TransactionController')->only([
-    'index'
 
