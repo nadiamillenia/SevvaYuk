@@ -39,24 +39,11 @@ Route::patch('/account/profile/{user}', 'UserController@update')->name('user.upd
 Route::get('/account/orders', 'OrderController@index')->name('order.index')->middleware('auth');
 Route::get('/account/setting', 'UserController@setting')->name('user.setting')->middleware('auth');
 
-//Admin
-Route::get('/admin', function () {
-    return view('admin/welcomeadmin');
-})->name('openingadmin');
-
-Route::get('/admin/login', 'AdminController@login');
 Route::post('/admin/loginPost', 'AdminController@loginPost');
-Route::get('/admin/logout', 'AdminController@logout');
 
 Route::get('/admin/home', 'AdminController@index')->name('home');
 
 //Transaction
 /*Route::resource('transaction', 'TransactionController')->only([
     'index'
-]);
-Route::get('fetch_image/{id}', 'TransactionController@fetch_image');
 
-Route::get('/admin/updateconfirmed/{id}', 'TransactionController@updateconfirmed');
-Route::get('/admin/updateremembered/{id}', 'TransactionController@updateremembered');
-Route::get('/admin/updatecanceled/{id}', 'TransactionController@updatecanceled');
-*/
