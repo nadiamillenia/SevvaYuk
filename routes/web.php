@@ -60,3 +60,15 @@ Route::get('/admin/updateconfirmed/{id}', 'TransactionController@updateconfirmed
 Route::get('/admin/updateremembered/{id}', 'TransactionController@updateremembered');
 Route::get('/admin/updatecanceled/{id}', 'TransactionController@updatecanceled');
 */
+Route::get('/confirmed', function () {
+    event(new App\Events\StatusConfirmed('Admin'));
+    return "Event has been sent!";
+})->name('confirmed');
+
+Route::get('/coba', function () {
+    return view('admin/coba');
+});
+
+Route::get('/done', function () {
+    return view('admin/confirmed');
+});

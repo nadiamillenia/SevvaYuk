@@ -19,7 +19,6 @@
                                         <a href="{{ url('shop') }}">Belanja Sekarang</a>
                                     </li>
                                     <li><a href="{{ url('contact') }}">Hubungi Kami</a></li>
-                                    <li><a href="{{ url('') }}">Notifications</a></li>
                                 </ul>
                             </nav>
                         </div>

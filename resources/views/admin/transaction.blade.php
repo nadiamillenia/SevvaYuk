@@ -45,7 +45,7 @@
                             <td><button type="button" class="btn btn-danger" disabled>Cancel</button></td>
                         @else
                             <td><a href="{{action('TransactionController@updateconfirmed', $transaction['id'])}}" class="btn btn-success">Konfirmasi</a></td> 
-                            <td><a href="{{action('TransactionController@updateremembered', $transaction['id'])}}" class="btn btn-warning">Reminder</a></td>
+                            <td><a href="{{action('TransactionController@updatereminder', $transaction['id'])}}" class="btn btn-warning">Reminder</a></td>
                             <td><a href="{{action('TransactionController@updatecanceled', $transaction['id'])}}" class="btn btn-danger">Cancel</a></td>
                         @endif
                     </tr>

@@ -11,7 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Sevva Yuk</title>
-
+    
     <!-- Scripts -->
     <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
 
@@ -54,6 +54,8 @@
         </div>
 
         @include('layouts.includes.header')
+
+        
 
         @yield('content')
 
