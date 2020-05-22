@@ -14,6 +14,7 @@ class RatingController extends Controller
 
     public function createRating(Request $request, $store_id)
     {
+        
         $rating = [
             'rating_star' => $request->input('rating'),
             'store_id' => $store_id,

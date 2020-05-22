@@ -10,6 +10,15 @@
 <body>
 
 <main>
+@if ($errors->any()) 
+            <div class="alert alert-danger"> 
+                <ul> 
+                    @foreach ($errors->all() as $error) 
+                    <li>{{ $error }}</li> 
+                    @endforeach 
+                </ul> 
+            </div><br /> 
+            @endif
    <section>
       <!-- form starts -->
       {{ Form::open(array('url' => 'rating/123')) }}

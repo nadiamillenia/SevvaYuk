@@ -72,3 +72,16 @@ Route::get('/coba', function () {
 Route::get('/done', function () {
     return view('admin/confirmed');
 });
+
+Route::get('/transaction', 'TransactionController@transaction');
+Route::post('/save', 'TransactionController@save');
+
+Route::get('/status', 'TransactionController@status');
+
+Route::get('/uploadbukti', 'UploadController@upload');
+Route::post('/uploadproses', 'UploadController@proses_upload');
+
+Route::get('/upload/hapus/{id}', 'UploadController@hapus');
+
+Route::get('/rating/{store_id}', 'RatingController@formRating')->name('rating');
+Route::post('/rating/{store_id}', 'RatingController@createRating');
